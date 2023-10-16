@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(223, 221, 221);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.form-top{ 
+    align-content: space-between;
+    height:10vh;
+    width:100%;
+    margin-top:55px;
+}
+
+.progress-container{
+    width: 100%;
+    background-color: #f3f3f3;
+    position:relative;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: #f0760b;
+    text-align: center;
+    line-height: 10px;
+    color: white;
+
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container {
+    background-color: white;
+    width: 70vw;
+    height: 100vh;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}

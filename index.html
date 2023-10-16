@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/0eba685890.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+</head>
+<body>
+    
+
+    <div class="form-container">
+       <div class="form-top">
+        <i class="fa-brands fa-font-awesome"></i>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+       </div>
+   <br>
+
+
+        <form id="form">
+            <div class="page" id="page 0">
+                <h1> Which type of property are you looking for? *</h1>
+                <h4> *Required question </h4>
+                <button type="button" onclick="Selection">HDB</button>
+                <button type="button" onclick="Selection">Condo</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+            <div class="page" id="page 1">
+                <h1>District(s) you want to move to:*</h1>
+                <h4><p>You may select up to 3 option
+                    *Required question   </p></h4>
+                    <select name="nationality" id="nationalities">
+                        <option value="India">India</option>
+                        <option value=" America">United States Of America</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Nepal">Nepal</option>
+                      </select>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id="page 2">
+                <h1> What property type(s) are you considering? * </h1>
+                <h4>   You may select more than 1 option
+                       *Required question</h4>
+                    <li><input type="checkbox" id="house1" name="Type1" value="Condominium">
+                       <label for="house1">Condominium</label>
+                       <input type="checkbox" id="house2" name="Type2" value="Apartment">
+                       <label for="house2">Apartment</label>
+                       <input type="checkbox" id="house3" name="Type3" value="Executive Condominium">
+                       <label for="house3">Executive Condominium</label>
+                      <input type="checkbox" id="house4" name="Type4" value="Walk-up">
+                      <label for="house4">Walk-up</label>
+                      <input type="checkbox" id="house5" name="Type5" value="Cluster">
+                      <label for="house5">Cluster</label></li>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+
+             <div class="page" id="page 3">
+                <h1>Which rental type are you looking for? *</h1>
+                <h4>*Required question</h4>
+                <button type="button" onclick="Selection">Room Rental</button>
+                <button type="button" onclick="Selection">Whole Apartment Rental</button>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+             </div>
+              
+
+            <div class="page" id= "page 4">
+                <h1>Please specify the number of rooms required:*</h1>
+                <h4>*Required question</h4>
+                <button type="button" onclick="Selection"> 1 Room </button>
+                <button type="button" onclick="Selection"> 2 Rooms</button>
+                <button type="button" onclick="Selection"> 3 Rooms</button>
+                <button type="button" onclick="Selection"> 4+ Rooms</button>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+
+            <div class="page" id= "page 5">
+                <h1>How long do you plan to rent the place?*</h1>
+                <h4>*Required question</h4>
+                <button type="button" onclick="Selection"> 6 months </button>
+                <button type="button" onclick="Selection"> 1 year   </button>
+                <button type="button" onclick="Selection"> 1-2 years</button>
+                <button type="button" onclick="Selection"> 2+ years </button>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id= "page 6">
+                <h1>What is your total budget per month?*</h1>
+                <h4>*Required question</h4>
+                <input type="text" placeholder="₹">
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id= "page 7">
+                <h1>When do you wish to move in?*</h1>
+                <h4>*Required question</h4>
+                <button type="button" onclick="Selection"> As soon as possible </button>
+                <button type="button" onclick="Selection"> Within 3 months    </button>
+                <button type="button" onclick="Selection"> Within the next 6 months</button>
+                <button type="button" onclick="Selection"> Between 6-12 months </button>
+                <button type="button" onclick="Selection"> I have no specific Timeline </button>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id= "page 8">
+                <h1>Please indicate if you have any other requirements below:</h1>
+                <h4>Optional Question</h4>
+                <input type="text" placeholder="Requirements">
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id= "page 9">
+                <h1>Number of occupants renting the place, including yourself:*</h1>
+                <h4> *Required Question</h4>
+                <button type="button" onclick="Selection"> 1 </button>
+                <button type="button" onclick="Selection"> 2 </button>
+                <button type="button" onclick="Selection"> 3 </button>
+                <button type="button" onclick="Selection"> 4 </button>
+                <button type="button" onclick="Selection"> 5+ </button>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id= "page 10">
+                <h1>Gender of occupant(s):*</h1>
+                <h4> *Required Question</h4>
+                <button type="button" onclick="Selection"> Male </button>
+                <button type="button" onclick="Selection"> Female </button>
+                <button type="button" onclick="Selection"> Mix of Both Genders </button>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+
+            <div class="page" id= "page 11">
+                <h1>Please indicate the nationality of occupant(s)?*</h1>
+                <h4>You may select up to 6 options 
+                    *Required question</h4>
+                    <label for="cars">Type or Select an option</label>
+
+                    <select name="nationality" id="nationalities">
+                      <option value="India">India</option>
+                      <option value=" America">United States Of America</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="New Zealand">New Zealand</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Nepal">Nepal</option>
+                    </select>
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+            <div class="page" id= "page 12">
+                <h1>Which type of work pass do you hold?*</h1>
+                <h4>You may select more than 1 option
+                    *Required question</h4>
+                   <li> <input type="checkbox" id="pass1" name="propertyType1" value="Employment Pass">
+                    <label for="pass1">Employment Pass</label>
+                    <input type="checkbox" id="pass2" name="propertyType2" value="Student Pass">
+                    <label for="pass2">Student Pass</label>
+                    <input type="checkbox" id="pass3" name="propertyType3" value="Work Permit Holder">
+                    <label for="pass3">Work Permit Holder</label>
+                    <input type="checkbox" id="pass4" name="propertyType4" value="Dependent Pass">
+                    <label for="pass4">Dependent Pass</label>
+                    <input type="checkbox" id="pass5" name="propertyType5" value="None of the Above">
+                    <label for="pass5">None of the Above</label> </li>
+                     <button type="button" onclick="prevPage()">Previous</button>
+                     <button type="button" onclick="nextPage()">Next</button>
+            </div>
+
+
+
+            <div class="page" id="page 13">
+                <h1><p>Just one step away to get your preferences matched!</p></h1>
+                <h4>Drop us your contact details and we will keep you updated via Whatsapp on any listings that match your preferences!</h4>
+                <input type="text" placeholder="Name*">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="No.">
+                <button type="button" onclick="prevPage()">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
