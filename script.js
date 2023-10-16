@@ -1,30 +1,31 @@
 let currentPage = 1;
+const totalQuestions = 13; // Set the total number of questions
 
 function move() {
     var elem = document.getElementById("myBar");
-    var width = 0;
+    var width = (currentPage - 1) * (100 / totalQuestions); // Calculate the progress based on the current question
     var id = setInterval(frame, 10);
 
     function frame() {
-        if (width >= 100) {
+        if (width >= currentPage * (100 / totalQuestions)) {
             clearInterval(id);
-        } else {
+        } else if (width < currentPage * (100 / totalQuestions)) {
             width++;
             elem.style.width = width + '%';
-            elem.innerHTML = width + '%';
-        }
+            }
     }
 }
+
 function showPage(pageNumber) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
     pages[pageNumber - 1].classList.add('active');
+    move(); // Move progress bar when showing new question
 }
 
 function nextPage() {
-    if (currentPage < 14) {
+    if (currentPage < totalQuestions) {
         currentPage++;
-        move();
         showPage(currentPage);
     }
 }
@@ -38,12 +39,6 @@ function prevPage() {
 
 document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
-
 });
 
 showPage(currentPage);
-
-
-
-
-
